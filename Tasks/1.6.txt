@@ -1,0 +1,20 @@
+﻿1st View CONV_DATE
+---------------------------------
+SELECT AR_TRAP, TO_CHAR(en_time, 'DD-MON-YYYY') AS DAY ,ONOMA, EPONYMO
+
+FROM PRIVATE
+---------------------------------
+---------------------------------
+2nd View FIND_DUP
+---------------------------------
+SELECT DAY, AR_TRAP FROM CONV_DATE
+    GROUP BY DAY,AR_TRAP
+    HAVING COUNT(*)>1
+---------------------------------
+---------------------------------
+3rd View MT1T
+---------------------------------
+SELECT FIND_DUP.DAY, FIND_DUP.AR_TRAP, CONV_DATE.ONOMA,CONV_DATE.EPONYMO
+FROM FIND_DUP,CONV_DATE
+WHERE FIND_DUP.DAY = CONV_DATE.DAY
+AND FIND_DUP.AR_TRAP = CONV_DATE.AR_TRAP

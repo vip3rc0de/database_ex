@@ -1,0 +1,15 @@
+﻿1st View BOSS_MIS
+---------------------------------
+select
+    PROSWPIKO.ONOMA_PR , PROSWPIKO.EPONYMO_PR, PROSWPIKO.MISTHOS
+from
+     PROSWPIKO
+where
+     PROSWPIKO.TITLOS = 'Boss'
+---------------------------------
+---------------------------------
+SQL Workheet
+---------------------------------
+SELECT PROSWPIKO.ONOMA_PR,PROSWPIKO.EPONYMO_PR,PROSWPIKO.MISTHOS
+FROM PROSWPIKO,BOSS_MIS
+WHERE PROSWPIKO.MISTHOS > BOSS_MIS.MISTHOS

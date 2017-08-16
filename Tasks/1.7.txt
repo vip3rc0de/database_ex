@@ -1,0 +1,6 @@
+﻿SELECT DISTINCT ONOMA_PR, EPONYMO_PR, PERIOXH
+FROM proswpiko 
+
+WHERE Master_service = 'Anna Tsalaki'
+
+order by PERIOXH DESC , ONOMA_PR ASC

@@ -1,0 +1,3 @@
+﻿ALTER TABLE PROSWPIKO
+ADD CONSTRAINT PROSWPIKO_CHK4 CHECK 
+(TITLOS IN ('Chef', 'Master Chef', 'Receptionist' , 'Service', 'Master Service', 'Boss'));
